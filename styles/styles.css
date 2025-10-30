@@ -1,3 +1,4 @@
+ /* Reset and base styles */
  * {
      margin: 0;
      padding: 0;
@@ -5,18 +6,21 @@
      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
  }
 
+ /* Body styles */
  body {
      background-color: #f5f7fa;
      color: #333;
      line-height: 1.6;
  }
 
+ /* Main container for centering content */
  .container {
      max-width: 1200px;
      margin: 0 auto;
      padding: 20px;
  }
 
+ /* Header styles */
  header {
      text-align: center;
      margin-bottom: 30px;
@@ -27,30 +31,33 @@
      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
  }
 
+ /* Main heading */
  h1 {
      font-size: 2.5rem;
      margin-bottom: 10px;
  }
 
+ /* Subtitle text */
  .subtitle {
      font-size: 1.1rem;
      opacity: 0.9;
  }
 
+ /* Main app layout grid */
  .app-container {
      display: grid;
      grid-template-columns: 1fr 2fr;
      gap: 30px;
  }
 
-
-
+ /* Responsive design for mobile devices */
  @media (max-width: 768px) {
      .app-container {
          grid-template-columns: 1fr;
      }
  }
 
+ /* Form section styling */
  .form-section {
      background: white;
      padding: 25px;
@@ -58,6 +65,7 @@
      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
  }
 
+ /* Form title */
  .form-title {
      font-size: 1.5rem;
      margin-bottom: 20px;
@@ -66,10 +74,12 @@
      padding-bottom: 10px;
  }
 
+ /* Form group for input fields */
  .form-group {
      margin-bottom: 20px;
  }
 
+ /* Label styling */
  label {
      display: block;
      margin-bottom: 8px;
@@ -77,6 +87,7 @@
      color: #2c3e50;
  }
 
+ /* Input and select field styling */
  input,
  select {
      width: 100%;
@@ -87,6 +98,7 @@
      transition: border-color 0.3s;
  }
 
+ /* Focus state for form inputs */
  input:focus,
  select:focus {
      outline: none;
@@ -94,6 +106,7 @@
      box-shadow: 0 0 0 2px rgba(106, 17, 203, 0.2);
  }
 
+ /* Base button styles */
  .btn {
      padding: 12px 20px;
      border: none;
@@ -104,6 +117,7 @@
      transition: all 0.3s;
  }
 
+ /* Primary button (add contact) */
  .btn-primary {
      background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
      color: white;
@@ -114,6 +128,20 @@
      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
  }
 
+ /* Edit Button */
+ .btn-edit {
+     background: linear-gradient(135deg, #ff9a00 0%, #ff6a00 100%);
+     color: white;
+     border: none;
+ }
+
+ .btn-edit:hover {
+     background: linear-gradient(135deg, #ff8a00 0%, #ff5a00 100%);
+     transform: translateY(-2px);
+     box-shadow: 0 4px 8px rgba(255, 106, 0, 0.3);
+ }
+
+ /* Secondary button (cancel) */
  .btn-secondary {
      background-color: #f8f9fa;
      color: #495057;
@@ -124,6 +152,7 @@
      background-color: #e9ecef;
  }
 
+ /* Danger button (delete) */
  .btn-danger {
      background-color: #e74c3c;
      color: white;
@@ -133,6 +162,7 @@
      background-color: #c0392b;
  }
 
+ /* Success button style */
  .btn-success {
      background-color: #2ecc71;
      color: white;
@@ -142,6 +172,7 @@
      background-color: #27ae60;
  }
 
+ /* Contacts list section */
  .contacts-section {
      background: white;
      padding: 25px;
@@ -149,27 +180,32 @@
      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
  }
 
+ /* Search container layout */
  .search-container {
      display: flex;
      margin-bottom: 20px;
  }
 
+ /* Search input specific styling */
  .search-container input {
      flex: 1;
      border-top-right-radius: 0;
      border-bottom-right-radius: 0;
  }
 
+ /* Search button specific styling */
  .search-container button {
      border-top-left-radius: 0;
      border-bottom-left-radius: 0;
  }
 
+ /* Contacts list container */
  .contacts-list {
      max-height: 500px;
      overflow-y: auto;
  }
 
+ /* Individual contact item */
  .contact-item {
      display: flex;
      justify-content: space-between;
@@ -179,10 +215,12 @@
      transition: background-color 0.2s;
  }
 
+ /* Hover effect for contact items */
  .contact-item:hover {
      background-color: #f8f9fa;
  }
 
+ /* Contact information styling */
  .contact-info h3 {
      font-size: 1.2rem;
      color: #2c3e50;
@@ -199,23 +237,27 @@
      font-style: italic;
  }
 
+ /* Contact action buttons container */
  .contact-actions {
      display: flex;
      gap: 10px;
  }
 
+ /* Empty state styling */
  .no-contacts {
      text-align: center;
      padding: 30px;
      color: #7f8c8d;
  }
 
+ /* Loading state styling */
  .loading {
      text-align: center;
      padding: 20px;
      color: #6a11cb;
  }
 
+ /* Error message styling */
  .error-message {
      background-color: #ffeaa7;
      color: #d63031;
@@ -225,6 +267,7 @@
      display: none;
  }
 
+ /* Success message styling */
  .success-message {
      background-color: #55efc4;
      color: #00b894;
@@ -234,6 +277,7 @@
      display: none;
  }
 
+ /* Modal overlay */
  .modal {
      display: none;
      position: fixed;
@@ -247,6 +291,7 @@
      align-items: center;
  }
 
+ /* Modal content box */
  .modal-content {
      background-color: white;
      padding: 30px;
@@ -256,6 +301,7 @@
      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
  }
 
+ /* Modal header layout */
  .modal-header {
      display: flex;
      justify-content: space-between;
@@ -263,11 +309,13 @@
      margin-bottom: 20px;
  }
 
+ /* Modal title */
  .modal-title {
      font-size: 1.5rem;
      color: #2c3e50;
  }
 
+ /* Close button styling */
  .close-btn {
      background: none;
      border: none;
@@ -276,6 +324,7 @@
      color: #7f8c8d;
  }
 
+ /* Modal footer for action buttons */
  .modal-footer {
      display: flex;
      justify-content: flex-end;
@@ -283,6 +332,7 @@
      margin-top: 20px;
  }
 
+ /* Validation error message styling */
  .validation-error {
      color: #e74c3c;
      font-size: 0.85rem;
@@ -290,16 +340,19 @@
      display: none;
  }
 
+ /* Input field error state */
  .input-error {
      border-color: #e74c3c !important;
      box-shadow: 0 0 0 2px rgba(231, 76, 60, 0.2) !important;
  }
 
+ /* Input field success state */
  .input-success {
      border-color: #2ecc71 !important;
      box-shadow: 0 0 0 2px rgba(46, 204, 113, 0.2) !important;
  }
 
+ /* Validation summary container */
  .validation-summary {
      background-color: #ffeaa7;
      color: #d63031;
@@ -307,4 +360,22 @@
      border-radius: 6px;
      margin-bottom: 20px;
      display: none;
+ }
+
+ .local-badge {
+     background-color: #f39c12;
+     color: white;
+     padding: 2px 8px;
+     border-radius: 4px;
+     font-size: 0.7rem;
+     margin-left: 5px;
+ }
+
+ .api-badge {
+     background-color: #3498db;
+     color: white;
+     padding: 2px 8px;
+     border-radius: 4px;
+     font-size: 0.7rem;
+     margin-left: 5px;
  }

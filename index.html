@@ -2,67 +2,99 @@
 <html lang="en">
 
 <head>
+    <!-- Document metadata -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Phonebook Application</title>
+    <!-- External CSS stylesheet -->
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 
 <body>
+    <!-- Main container for the entire application -->
     <div class="container">
+        <!-- Application header section -->
         <header>
             <h1>📱 Phonebook Application</h1>
-            
+
         </header>
 
+        <!-- Error message display - shown when operations fail -->
         <div class="error-message" id="errorMessage"></div>
+        <!-- Success message display - shown when operations succeed -->
         <div class="success-message" id="successMessage"></div>
+        <!-- Validation summary - shows form validation errors -->
         <div class="validation-summary" id="validationSummary"></div>
 
+        <!-- Main application layout with two-column design -->
         <div class="app-container">
+            <!--  Add contact form section -->
             <div class="form-section">
                 <h2 class="form-title">Add New Contact</h2>
+                <!-- Contact creation form -->
                 <form id="contactForm">
+                    <!-- Name input field -->
                     <div class="form-group">
                         <label for="name">Full Name *</label>
                         <input type="text" id="name" placeholder="Enter full name" required>
+                        <!-- Validation error message for name field -->
                         <div class="validation-error" id="nameError"></div>
                     </div>
+
+                    <!-- Phone number input field -->
                     <div class="form-group">
                         <label for="phone">Phone Number *</label>
                         <input type="tel" id="phone" placeholder="e.g., 123-456-7890 or (123) 456-7890" required>
+                        <!-- Validation error message for phone field -->
                         <div class="validation-error" id="phoneError"></div>
                     </div>
+
+                    <!-- Email input field -->
                     <div class="form-group">
                         <label for="email">Email Address</label>
                         <input type="email" id="email" placeholder="Enter email address">
+                        <!-- Validation error message for email field -->
                         <div class="validation-error" id="emailError"></div>
                     </div>
-                    
+
+                    <!-- Form submission button -->
                     <button type="submit" class="btn btn-primary">Add Contact</button>
                 </form>
             </div>
 
+            <!--  Contacts list section -->
             <div class="contacts-section">
                 <h2 class="form-title">Contacts</h2>
+
+                <!-- Search functionality -->
                 <div class="search-container">
                     <input type="text" id="searchInput" placeholder="Search by name or phone number">
                     <button class="btn btn-primary" id="searchBtn">Search</button>
                 </div>
+
+                <!-- Container for displaying the list of contacts -->
                 <div class="contacts-list" id="contactsList">
+                    <!-- Loading state - shown while fetching data -->
                     <div class="loading">Loading contacts...</div>
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- Delete Confirmation Modal -->
+    <!-- This modal appears when user tries to delete a contact -->
     <div class="modal" id="deleteModal">
         <div class="modal-content">
+            <!-- Modal header with title and close button -->
             <div class="modal-header">
                 <h3 class="modal-title">Confirm Deletion</h3>
                 <button class="close-btn" id="closeDeleteModal">&times;</button>
             </div>
+
+            <!-- Warning message -->
             <p>Are you sure you want to delete this contact? This action cannot be undone.</p>
+
+            <!-- Modal action buttons -->
             <div class="modal-footer">
                 <button class="btn btn-secondary" id="cancelDelete">Cancel</button>
                 <button class="btn btn-danger" id="confirmDelete">Delete</button>
@@ -70,30 +102,46 @@
         </div>
     </div>
 
+    <!-- Edit Contact Modal -->
+    <!-- This modal appears when user wants to edit a contact -->
     <div class="modal" id="editModal">
         <div class="modal-content">
+            <!-- Modal header with title and close button -->
             <div class="modal-header">
                 <h3 class="modal-title">Edit Contact</h3>
                 <button class="close-btn" id="closeEditModal">&times;</button>
             </div>
+
+            <!-- Edit contact form -->
             <form id="editForm">
+                <!-- Hidden field to store the contact ID being edited -->
                 <input type="hidden" id="editId">
+
+                <!-- Name input field for editing -->
                 <div class="form-group">
                     <label for="editName">Full Name *</label>
                     <input type="text" id="editName" placeholder="Enter full name" required>
+                    <!-- Validation error message for edit name field -->
                     <div class="validation-error" id="editNameError"></div>
                 </div>
+
+                <!-- Phone number input field for editing -->
                 <div class="form-group">
                     <label for="editPhone">Phone Number *</label>
                     <input type="tel" id="editPhone" placeholder="e.g., 123-456-7890 or (123) 456-7890" required>
+                    <!-- Validation error message for edit phone field -->
                     <div class="validation-error" id="editPhoneError"></div>
                 </div>
+
+                <!-- Email input field for editing -->
                 <div class="form-group">
                     <label for="editEmail">Email Address</label>
                     <input type="email" id="editEmail" placeholder="Enter email address">
+                    <!-- Validation error message for edit email field -->
                     <div class="validation-error" id="editEmailError"></div>
                 </div>
-               
+
+                <!-- Modal action buttons -->
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" id="cancelEdit">Cancel</button>
                     <button type="submit" class="btn btn-success">Update Contact</button>
@@ -102,6 +150,7 @@
         </div>
     </div>
 
+    <!-- External JavaScript file -->
     <script src="styles/script.js"></script>
 </body>
 
